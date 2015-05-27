@@ -4,13 +4,13 @@
     name="model" />
   <arg
     name="gui"
-    default="False" />
+    default="True" />
   <param
     name="robot_description"
     textfile="$(find OUR-I)/robots/OUR-I.URDF" />
   <!-- param
     name="robot_description"
-    textfile="$(find OUR-I)/robots/our-i.urdf" / -->
+    textfile="$(find OUR-I)/robots/our-i.urdf.xacro" / -->
   <param
     name="use_gui"
     value="$(arg gui)" />
