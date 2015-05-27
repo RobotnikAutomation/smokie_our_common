@@ -7,7 +7,7 @@
     default="True" />
   <param
     name="robot_description"
-    textfile="$(find OUR-I)/robots/OUR-I.URDF" />
+    textfile="$(find OUR-I)/robots/our-i_standalone.urdf.xacro" />
   <!-- param
     name="robot_description"
     textfile="$(find OUR-I)/robots/our-i.urdf.xacro" / -->
