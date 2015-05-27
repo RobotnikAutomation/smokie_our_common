@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
-<robot name="OUR-I" xmlns:xacro="http://www.ros.org/wiki/xacro">   
+
+<robot name="OUR-I" xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+
+  <!-- Import all available sensors -->
+  <xacro:include filename="$(find robotnik_sensors)/urdf/all_sensors.urdf.xacro" />
+
   <link
     name="our_base_link">
     <inertial>
@@ -388,4 +393,11 @@
       effort="50"
       velocity="50" />
   </joint>
+
+   
+   <xacro:sensor_hokuyo_urg04lx name="hokuyo1" parent="link6">
+		<origin xyz="0.15 0 0.05" rpy="0 0 0"/>
+	</xacro:sensor_hokuyo_urg04lx>
+  
+    
 </robot>
