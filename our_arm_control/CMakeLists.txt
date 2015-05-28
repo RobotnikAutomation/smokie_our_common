@@ -5,7 +5,7 @@ project(our_arm_control)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  OUR-I
+  our_arm_description
   controller_manager
   controller_manager_msgs
   std_msgs
@@ -84,7 +84,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES our_arm_control
-#  CATKIN_DEPENDS OUR-I controller_manager controller_manager_msgs std_msgs std_srvs
+#  CATKIN_DEPENDS our_arm_description controller_manager controller_manager_msgs std_msgs std_srvs
 #  DEPENDS system_lib
 )
 
