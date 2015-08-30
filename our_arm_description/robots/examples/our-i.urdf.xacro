@@ -399,5 +399,57 @@
 		<origin xyz="0.15 0 0.05" rpy="0 0 0"/>
 	</xacro:sensor_hokuyo_urg04lx>
   
-    
+  <link
+    name="sprayer">
+    <inertial>
+      <origin
+        xyz="0.096192 -3.2388E-05 -9.298E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.24189" />
+      <inertia
+        ixx="0.00029991"
+        ixy="-1.0462E-07"
+        ixz="1.1547E-07"
+        iyy="0.00019336"
+        iyz="-1.4237E-07"
+        izz="0.00019382" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://our_arm_description/meshes/sprayer.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://our_arm_description/meshes/sprayer.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_sprayer"
+    type="fixed">
+    <origin
+      xyz="0.15 0 0.0"
+      rpy="0 0 ${PI/2}" />
+    <parent
+      link="link6" />
+    <child
+      link="sprayer" />
+  </joint>
+
+
 </robot>
